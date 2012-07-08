@@ -9,5 +9,6 @@ install:
 	@mkdir -p $(DESTDIR)$(DATADIR)/qml
 	@cp src/*.qml $(DESTDIR)$(DATADIR)/qml/
 	@cp src/wallpaper.jpg $(DESTDIR)$(DATADIR)/qml/
+	@mkdir -p $(DESTDIR)$(BINDIR)
 	@install -m 755 src/minimer $(DESTDIR)$(BINDIR)/
 

@@ -25,7 +25,7 @@ Demonstrates integration with uxlaunch and provides a base to evolve a custom UI
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n src
 
 # >> setup
 # << setup
@@ -39,8 +39,8 @@ Demonstrates integration with uxlaunch and provides a base to evolve a custom UI
 # >> build post
 # << build post
 %install
-rm -rf %{buildroot}
 # >> install pre
+%make_install
 # << install pre
 
 # >> install post

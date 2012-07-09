@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=XSession
+Name=mer-not-a-ux
+Exec=/usr/bin/minimer
+Comment=Simple Mer session

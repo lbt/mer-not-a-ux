@@ -39,6 +39,7 @@ Demonstrates integration with uxlaunch and provides a base to evolve a custom UI
 # >> build post
 # << build post
 %install
+rm -rf %{buildroot}
 # >> install pre
 %make_install
 # << install pre
@@ -48,8 +49,11 @@ Demonstrates integration with uxlaunch and provides a base to evolve a custom UI
 
 
 
-
-
+# >> post
+%post -p <lua>
+posix.unlink("%{_datadir}/xsessions/default.desktop")
+posix.symlink("%{_datadir}/mer-not-a-ux/mer-not-a-ux.desktop", "%{_datadir}/xsessions/default.desktop")
+print("Lua made a symlink to %{_datadir}/xsessions/default.desktop")
 
 %files
 %defattr(-,root,root,-)

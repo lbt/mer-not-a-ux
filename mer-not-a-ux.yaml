@@ -1,21 +1,22 @@
 Name: mer-not-a-ux
 Summary: A simple example of a basic UX package
-Description: Demonstrates integration with uxlaunch and provides a base to evolve a custom UI
-Version: 0.1
+Description: Demonstrates integration with uxlaunch and provides a base to evolve
+  a custom UI
+Version: 0.2
 Release: 1
 Group: System/GUI/Other
 License: GPL
 Sources:
-  - mer-not-a-ux.tar.bz2
+  - mer-not-a-ux-%{version}.tar.gz
 Requires:
-  - qt5-qtqml-qmlscene
-  - qt5-qtqml-import-qtquick2plugin
+  - qt5-qtdeclarative-qmlscene
+  - qt5-qtdeclarative-import-qtquick2plugin
   - qt5-plugin-platform-xcb
   - qt5-plugin-imageformat-jpeg
-
 Configure: none
 Builder: none
-
 Files:
-  - "%{_datadir}/mer-not-a-ux/*"
-  - "%{_bindir}/minimer"
+  - '%{_datadir}/mer-not-a-ux/*'
+  - '%{_bindir}/minimer'
+Patches: []
+SetupOptions: -q -n src
